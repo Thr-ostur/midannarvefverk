@@ -5,12 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/static/iphone.css">
+    <link rel="stylesheet" href="/static/jek.css">
     <title>Midnaverkefni </title>
 </head>
 <body>
 <h2>Bensínstöðvar</h2>
-    <div class="iphone">
+    <div class="jek">
     % margar = 0 
     % for stod in data['results']:
         % if stod['company'] == slod:
