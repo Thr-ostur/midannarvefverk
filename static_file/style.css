@@ -12,7 +12,7 @@ body {
     grid-gap: 15.2px;
 }
 .event{
-    background-color: gray;
+    background-color: cyan;
     padding: 13px;
     border: 2.75px dotted;
     border-radius: 34px;
@@ -20,14 +20,14 @@ body {
 h2{
 
     display: inline;
-    color: white;
+    color: grey;
     font-weight: bold;
     text-align: center;
     font-size: 2.5em;
 }
 h3{
     text-align: center;
-    color: white;
+    color: grey;
     font-size: 1em;
 }
 html,body{
