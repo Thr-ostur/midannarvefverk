@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/static_files/style.css">
+    <link rel="stylesheet" href="/static_file/style.css">
     <title>Midnaverkefni</title>
 
 <body>
@@ -14,7 +14,7 @@
     % myndir = ["Ob.jpg","Ao.jpg","Costco.jpg","Dælan.png","N1.png","Orkan.png","OrkanX.png"]
     % for mynd in myndir:
         <div class="mynd">
-        <img src="/static_files/{{mynd}}">
+        <img src="/static_file/{{mynd}}">
         </div>
     %end
     </div>
