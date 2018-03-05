@@ -21,7 +21,7 @@ t = t.strftime('%H:%M:%S %d/%m/%Y')
 
 @route('/')
 def index():
-    return template('dan',t=t,data=data,odyrtben=odyrtben,odyrtdi=odyrtdi)
+    return template('smok',t=t,data=data,odyrtben=odyrtben,odyrtdi=odyrtdi)
 
 @route('/company/<slod>')
 def company(slod):
@@ -31,9 +31,7 @@ def company(slod):
             til = True
             break
     if til == True:
-        
-    if til == True:
-        return template('company', slod=slod , data=data)
+        return template('fyrir', slod=slod , data=data)
     else:
         return '<h1>Síðan sem þú bast um er ekki til...'
 
@@ -47,7 +45,7 @@ def info(ok):
 def error(error):
     return '<h1>Síðan sem þú bast um er ekki til...'
 
-@route('/static_file/<filename>')
+@route('/static/<filename>')
 def static_server(filename):
     return static_file(filename, root=('./static_files'))
 
