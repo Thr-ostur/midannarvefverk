@@ -19,7 +19,7 @@
     %end
     </div>
 
-    <div class="iphone">
+    <div class="jek">
     % comp = []
     % for stod in data['results']:
         % if stod['company'] not in comp:
