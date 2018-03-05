@@ -45,7 +45,7 @@ def info(ok):
 def error(error):
     return '<h1>Síðan sem þú bast um er ekki til...'
 
-@route('/static/<filename>')
+@route('/static_file/<filename>')
 def static_server(filename):
     return static_file(filename, root=('./static_files'))
 
