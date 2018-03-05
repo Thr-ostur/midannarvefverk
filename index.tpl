@@ -5,54 +5,46 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Yfirlit eldsneytis</title>
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
+    <link rel="stylesheet" href="/static/stylee.css">
+    <title>Midnaverkefni</title>
+
 <body>
+    <h2>Söluaðilar eldsneytis á Íslandi</h2>
+    <div class="myndir">
+    % myndir = ["Ob.jpg","Ao.jpg","Costco.jpg","Dælan.png","N1.png","Orkan.png","OrkanX.png"]
+    % for mynd in myndir:
+        <div class="mynd">
+        <img src="/static/{{mynd}}">
+        </div>
+    %end
+    </div>
 
-    <%
-    companies = []
-    for station in data['results']:
-        if station['company'] not in companies:
-            companies.append(station['company'])
-        end
-    end
-    %>
+    <div class="iphone">
+    % comp = []
+    % for stod in data['results']:
+        % if stod['company'] not in comp:
+            % comp.append(stod['company'])
+            <div class="event">
+               <a href="/company/{{stod['company']}}"><h3>{{stod['company']}}</h3></a>
+                <img src="">
+            </div>
+        %end
+    %end
+        <div class="ben">
+        <h4>ódyrasta bensínið</h4>
+            {{odyrtben["company"]}}
+            {{odyrtben["name"]}}
+           {{odyrtben["bensin95"]}}
+        </div>
+        <div class="di">
+            <h4>ódyrast díesel</h4>
+            {{odyrtdi["company"]}}
+            {{odyrtdi["name"]}}
+            {{odyrtdi["bensin95"]}}
 
-    <h1>Veldu fyrirtæki:</h1>
-    % for company in companies:
-        <h2><a href="/company/{{company}}">{{company}}</a></h2>
-    % end
-
-    <%
-    bensin95disc = []
-    for station in data['results']:
-        if station['bensin95_discount'] != None:
-            bensin95disc.append({'company': station['company'], 'bensin95_discount': station['bensin95_discount']})
-        end
-    end
-
-    minb95 = min(data['results'], key=lambda x: x['bensin95'])
-    minb95disc = min(bensin95disc, key=lambda x: x['bensin95_discount'])
-    mind = min(data['results'], key=lambda x: x['diesel'])
-
-    %>
-
-    <h4>Lægsta verð - Bensín 95: {{minb95['bensin95']}}, {{minb95['company']}}</h4>
-    <h4>Lægsta verð með afslætti - Bensín 95: {{minb95disc['bensin95_discount']}}, {{minb95disc['company']}}</h4>
-    <h4>Lægsta verð - Diesel: {{mind['diesel']}} hjá {{mind['company']}}</h4>
-
-    <%
-    import datetime
-
-    t = data['timestampPriceCheck']
-    t = t[:19]
-
-    t = datetime.datetime.strptime(t, '%Y-%m-%dT%H:%M:%S')
-
-    %>
-
-    <h5>Síðast uppfært: {{t.strftime('%d. %b. %Y Kl. %H:%M')}}</h5>
+        </div>
+        {{t}}
+        </div>
 
 </body>
 </html>
