@@ -2,11 +2,17 @@
 box-sizing:border-box;
 }
 body {
+    background: #bfbebefc;
     max-width:75em;
     margin:auto;
 }
+.iphone{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15.2px;
+}
 .event{
-    background-color: blue;
+    background-color: gray;
     padding: 13px;
     border: 2.75px dotted;
     border-radius: 34px;
