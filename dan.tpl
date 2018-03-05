@@ -14,7 +14,7 @@
     % myndir = ["Ob.jpg","Ao.jpg","Costco.jpg","Dælan.png","N1.png","Orkan.png","OrkanX.png"]
     % for mynd in myndir:
         <div class="mynd">
-        <img src="/static/{{mynd}}">
+        <img src="/static_files/{{mynd}}">
         </div>
     %end
     </div>
