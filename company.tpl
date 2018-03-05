@@ -23,4 +23,3 @@
     </table>
 </body>
 </html>
-© 2018 GitHub, Inc.
