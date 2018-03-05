@@ -31,6 +31,9 @@ def company(slod):
             til = True
             break
     if til == True:
+        
+    if til == True:
+        return template('company', slod=slod , data=data)
     else:
         return '<h1>Síðan sem þú bast um er ekki til...'
 
