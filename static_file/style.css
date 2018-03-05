@@ -6,7 +6,7 @@ body {
     max-width:75em;
     margin:auto;
 }
-.iphone{
+.jek{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15.2px;
