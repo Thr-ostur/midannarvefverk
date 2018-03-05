@@ -21,7 +21,7 @@ t = t.strftime('%H:%M:%S %d/%m/%Y')
 
 @route('/')
 def index():
-    return template('smok',t=t,data=data,odyrtben=odyrtben,odyrtdi=odyrtdi)
+    return template('dan',t=t,data=data,odyrtben=odyrtben,odyrtdi=odyrtdi)
 
 @route('/company/<slod>')
 def company(slod):
