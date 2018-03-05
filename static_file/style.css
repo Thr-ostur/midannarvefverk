@@ -5,11 +5,6 @@ body {
     max-width:75em;
     margin:auto;
 }
-.iphone{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15.2px;
-}
 .event{
     background-color: gray;
     padding: 13px;
